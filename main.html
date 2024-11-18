@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wikipedia</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body class="main-body theme-light">
+    <div id="magnifier"></div>
+    <div class="overlay-main" id="overlay-off"></div>
+    <div class="main-body-container" id="content-to-pdf">
+      <!-- Header Section -->
+      <section class="main-section">
+        <header class="header-main-container container-wrapper">
+          <div class="logo">
+            <a href="https://www.google.com/">Wikipedia</a>
+          </div>
+          <div class="search-bar">
+            <input type="text" placeholder="Search Wikipedia" />
+          </div>
+        </header>
+      </section>
+
+      <!-- Main Container -->
+      <section class="main-container container-wrapper">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+          <ul class="nav-list">
+            <li>Main Page</li>
+            <li>Contents</li>
+            <li>Current Events</li>
+            <li>Random Article</li>
+            <li>About Wikipedia</li>
+          </ul>
+        </nav>
+
+        <!-- Main Article Content -->
+        <main class="article-content">
+          <div class="article-content-container">
+            <!-- Featured Article Section -->
+            <div class="featured-article">
+              <p>From today's featured article</p>
+              <div class="featured-content">
+                <img
+                  src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0"
+                  alt="Dummy Image"
+                />
+                <div class="featured-text">
+                  <p>
+                    Umbriel is the third-largest moon of Uranus. It was
+                    discovered on October 24, 1851, by William Lassell.
+                    Umbriel's surface appears to have been shaped mostly by
+                    impacts...
+                  </p>
+                  <p><a href="#">(Full article...)</a></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- News Section -->
+            <div class="news-section article-section">
+              <p>In the news</p>
+              <ul>
+                <li>
+                  <strong>Moldova votes</strong> to amend its constitution to
+                  join the EU.
+                </li>
+                <li>
+                  <strong>Yahya Sinwar</strong>, leader of Hamas, is killed in
+                  Gaza.
+                </li>
+                <li>
+                  <strong>Nobel Prize</strong> in Economics awarded to Daron
+                  Acemoglu and others.
+                </li>
+                <li>
+                  <strong>Europa Clipper</strong> spacecraft launched to
+                  investigate Jupiter's icy moon.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Sample Article Content -->
+          <article class="sample-article article-section">
+            <h1>Sample Wikipedia Article</h1>
+            <div class="article-img-text">
+              <img
+                src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0"
+                alt="Dummy Image"
+              />
+              <div>
+                <p>
+                  Europa is one of Jupiter's moons and is of great interest to
+                  scientists because of its potential to harbor life under its
+                  icy surface. The Europa Clipper mission will investigate this.
+                </p>
+                <p><a href="#">(Learn more...)</a></p>
+              </div>
+            </div>
+            <h2>Section 1</h2>
+            <p>
+              This is the first section of the article, containing general
+              information.
+            </p>
+            <h2>Section 2</h2>
+            <p>
+              This is the second section of the article, with more in-depth
+              content.
+            </p>
+          </article>
+        </main>
+      </section>
+
+      <!-- Footer Section -->
+      <section class="footer-section">
+        <footer class="container-wrapper">
+          <p>&copy; 2024 Wikipedia. All rights reserved.</p>
+        </footer>
+      </section>
+    </div>
+
+    <!-- Accessibility Icon-->
+    <img
+      src="./Accesibility.png"
+      alt="Accessibility Menu"
+      id="accessibility-icon"
+      class="accessibility-icon"
+    />
+
+    <!-- Accessibility Menu -->
+    <div class="accessibility-menu hidden " id="accessibility-menu">
+      <div class="menu-header">
+        <h3>Accessibility Menu</h3>
+        <!-- <button class="reset-btn">Reset</button> -->
+        <button class="close-btn">&times;</button>
+      </div>
+      <div class="menu-content">
+        <div class="menu-content-wrapper">
+          <div class="menu-option-container" id="generate-pdf-btn">
+            <h4>Download As Pdf</h4>
+          </div>
+          <div class="menu-option-container" id="generate-qr-btn">
+            <h4>Download QR Code</h4>
+          </div>
+          <div class="menu-option-container" id="log-shortened-url-btn">
+            <h4>Get Shortened URL</h4>
+          </div>
+          <div class="menu-option-container" id="fetch-info-btn">
+            <h4>Page Information</h4>
+          </div>
+          <div class="menu-option-container" id="print-btn">
+            <h4>Print As Pdf</h4>
+          </div>
+          <div class="menu-option-container" id="text-magnifier">
+            <h4>Text Magnifier</h4>
+          </div>
+          <div class="accordion-container menu-option-container">
+            <div class="accordion-header">Appearance</div>
+            <div class="accordion-content" id="accordionContent">
+              <!-- Text Size Options -->
+              <div class="option-group theme-light-text">
+                <label class="apperance-opt theme-light-text">Text Size:</label>
+                <label class="apperance-opt theme-light-text"
+                  ><input
+                    type="radio"
+                    name="textSize"
+                    value="small"
+                    class="radio-option"
+                  />
+                  Small</label
+                >
+                <label class="apperance-opt theme-light-text"
+                  ><input
+                    type="radio"
+                    name="textSize"
+                    value="standard"
+                    class="radio-option"
+                  />
+                  Standard</label
+                >
+                <label class="apperance-opt theme-light-text"
+                  ><input
+                    type="radio"
+                    name="textSize"
+                    value="large"
+                    class="radio-option"
+                  />
+                  Large</label
+                >
+              </div>
+
+              <!-- Width Options -->
+              <!-- <div class="option-group">
+                <label class="apperance-opt theme-light-text">Width:</label>
+                <label class="apperance-opt theme-light-text"
+                  ><input
+                    type="radio"
+                    name="width"
+                    value="standard"
+                    class="radio-option"
+                  />
+                  Standard</label
+                >
+                <label class="apperance-opt theme-light-text"
+                  ><input
+                    type="radio"
+                    name="width"
+                    value="wide"
+                    class="radio-option"
+                  />
+                  Wide</label
+                >
+              </div> -->
+
+              <!-- Color Theme Options -->
+              <div class="option-group">
+                <label class="apperance-opt theme-light-text">Color Theme:</label>
+                <label class="apperance-opt theme-light-text"
+                  ><input
+                    type="radio"
+                    name="color-theme"
+                    value="light"
+                    class="radio-option"
+                    checked
+                  />
+                  Light</label
+                >
+                <label class="apperance-opt theme-light-text"
+                  ><input
+                    type="radio"
+                    name="color-theme"
+                    value="dark"
+                    class="radio-option"
+                  />
+                  Dark</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Shortened URL -->
+    <div class="hidden" id="main-short-url-div">
+      <div class="modal hidden" id="short-url-modal">
+        <div class="modal-content">
+          <h3>Shortened URL</h3>
+          <div class="input-copy-div">
+            <input type="text" id="shortened-url-input" readonly />
+            <button id="copy-url-btn">Copy</button>
+          </div>
+          <button id="close-modal-btn">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Page Information -->
+    <div class="page-info-main">
+      <div id="page-info" class="page-info hidden-page-info">
+        <div style="position: relative; display: flex; width: 100%">
+          <h2 class="section-title">Basic Information</h2>
+          <button class="close-btn-page" id="close-page-info-btn">×</button>
+        </div>
+        <!-- Close Button -->
+        <table class="info-table">
+          <tr>
+            <th class="info-header">Display title</th>
+            <td class="info-data" id="display-title"></td>
+          </tr>
+          <tr>
+            <th class="info-header">Page length (in bytes)</th>
+            <td class="info-data" id="page-length"></td>
+          </tr>
+          <tr>
+            <th class="info-header">Page content language</th>
+            <td class="info-data" id="content-language"></td>
+          </tr>
+          <tr>
+            <th class="info-header">Number of redirects</th>
+            <td class="info-data" id="redirects"></td>
+          </tr>
+          <tr>
+            <th class="info-header">Wikidata item ID</th>
+            <td class="info-data" id="wikidata-id"></td>
+          </tr>
+          <tr>
+            <th class="info-header">Meta description</th>
+            <td class="info-data" id="meta-description"></td>
+          </tr>
+          <tr>
+            <th class="info-header">Meta keywords</th>
+            <td class="info-data" id="meta-keywords"></td>
+          </tr>
+          <tr>
+            <th class="info-header">Links</th>
+            <td class="info-data" id="links"></td>
+          </tr>
+          <tr>
+            <th class="info-header">Images</th>
+            <td class="info-data" id="images"></td>
+          </tr>
+          <tr>
+            <th class="info-header">Scripts</th>
+            <td class="info-data" id="scripts"></td>
+          </tr>
+          <tr>
+            <th class="info-header">Word count</th>
+            <td class="info-data" id="word-count"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
